@@ -1,0 +1,91 @@
+@import 'variables.scss';
+
+.splash-page {
+  background-color: $med-blue;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.touch-terminal {
+  margin: 0;
+  color: $black;
+  font-size: 5em;
+}
+
+.far {
+  font-size: 50px;
+}
+
+.slogan {
+  margin: 0 0 30px 0;
+}
+
+.drop-shadow{
+  -webkit-filter:drop-shadow(-8px -8px -2px $yellow);      
+/*  filter: drop-shadow(6px 8px 35px $yellow) drop-shadow(6px 8px 25px $yellow) drop-shadow(6px 8px 15px $yellow);*/
+  animation: glowing 1000ms infinite;
+}
+
+@keyframes glowing {
+  0% { filter: drop-shadow(5px 5px 20px $yellow) drop-shadow(-5px -5px 20px $yellow) drop-shadow(0px 5px 20px $yellow) drop-shadow(5px 0px 20px $yellow)}
+  50% { filter: drop-shadow(5px 5px 19px $yellow) drop-shadow(-5px -5px 19px $yellow) drop-shadow(0px 5px 19px $yellow) drop-shadow(5px 0px 19px $yellow) }
+  25% { filter: drop-shadow(5px 5px 18px $yellow) drop-shadow(-5px -5px 18px $yellow) drop-shadow(0px 5px 18px $yellow) drop-shadow(5px 0px 18px $yellow) }
+  50% { filter: drop-shadow(5px 5px 17px $yellow) drop-shadow(-5px -5px 17px $yellow) drop-shadow(0px 5px 17px $yellow) drop-shadow(5px 0px 17px $yellow) }
+  50% { filter: drop-shadow(5px 5px 16px $yellow) drop-shadow(-5px -5px 16px $yellow) drop-shadow(0px 5px 16px $yellow) drop-shadow(5px 0px 16px $yellow) }
+  50% { filter: drop-shadow(5px 5px 17px $yellow) drop-shadow(-5px -5px 17px $yellow) drop-shadow(0px 5px 17px $yellow) drop-shadow(5px 0px 17px $yellow) }
+  75% { filter: drop-shadow(5px 5px 18px $yellow) drop-shadow(-5px -5px 18px $yellow) drop-shadow(0px 5px 18px $yellow) drop-shadow(5px 0px 18px $yellow) }
+  50% { filter: drop-shadow(5px 5px 19px $yellow) drop-shadow(-5px -5px 19px $yellow) drop-shadow(0px 5px 19px $yellow) drop-shadow(5px 0px 19px $yellow) }
+  100% { filter: drop-shadow(5px 5px 20px $yellow) drop-shadow(-5px -5px 20px $yellow) drop-shadow(0px 5px 20px $yellow) drop-shadow(5px 0px 20px $yellow)}
+}
+
+.name-input {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid $yellow;
+}
+
+.submit-name {
+  height: 30px;
+  background-color: $yellow;
+}
+
+.name-input:placeholder {
+  font-size: 20px;
+}
+
+.level-btn {
+  height: 80px;
+  width: 150px;
+  margin: 10px;
+  font-size: 1.5em;
+  color: white;
+  border: none;
+}
+
+.beginner {
+  background-color: $drk-blue;
+}
+
+.novice {
+  background-color: $plum;
+}
+
+.advanced {
+  background-color: $black
+}
+
+.start-learning {
+  background: $yellow;
+  height: 40px;
+  color: $black;
+  border: none;
+  font-size: 20px;
+}
+
