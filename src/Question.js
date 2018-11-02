@@ -7,8 +7,8 @@ export default class Question extends Component {
     return (
       <div> 
         <h3>{this.props.question}</h3>
-        <input type='text'/>
-        <button>Submit Your Guess</button>
+        <input type='text' className='guess-input'/>
+        <button onClick={ this.props.showAnswer }>Submit Your Guess</button>
       </div>
     );
   }
