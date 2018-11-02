@@ -15,9 +15,8 @@ export default class Splash extends Component {
           <button className='submit-name'>Submit</button>
         </form>
         <div>  
-          <button className='level-btn beginner'>Beginner</button>
-          <button className='level-btn novice'>Novice</button>
-          <button className='level-btn advanced'>Advanced</button>
+          <button className='level-btn beginner'>Git Commands</button>
+          <button className='level-btn advanced'>Terminal Commands</button>
         </div>
         <button className='start-learning' onClick={ this.props.showSplash }>Start Learning</button>
       </div>
