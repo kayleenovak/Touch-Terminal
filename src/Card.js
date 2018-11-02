@@ -9,16 +9,27 @@ export default class Card extends Component {
   constructor() {
     super()
     this.state = {
-      showResult: null
+      showCorrect: null,
+      showIncorrect: null
     }
+  }
+
+  showAnswer = () => {
+
+    this.setState({
+      showResult: true
+    })
   }
 
   render() {
     return (
       <div> 
-        <Question />
-        <Guess />
-        <Result />
+        {
+          this.state.showCorrect ? <CorrectGuess /> : <Question question={ this.props.question }/> 
+        }
+        { this.state.showIncorrect ? <IncorrectGuess /> : <Question question={ this.props.question }/> 
+
+        }
       </div>
     );
   }
