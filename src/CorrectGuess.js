@@ -10,7 +10,7 @@ export default class CorrectGuess extends Component {
         <div className='wave'></div>
         <img src='./images/lightbulb.svg' className='lightbulb'/>
         <p className='correct'>Correct!</p>
-        <button className='next-card-btn'>Next Card</button>
+        <button className='next-card-btn' onClick={ this.props.showQuestion }>Next Card</button>
       </div>
     );
   }

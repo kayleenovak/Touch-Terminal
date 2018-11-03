@@ -30,11 +30,20 @@ export default class Card extends Component {
     }
   }
 
+  showQuestion = () => {
+    this.setState({
+      showQuestion: true,
+      showCorrect: null,
+      showIncorrect: null
+    })
+    this.props.nextCard()
+  }
+
   render() {
     return (
       <div> 
         {
-          this.state.showQuestion ? <Question question={ this.props.question } answer={ this.props.answer} showAnswer={ this.showAnswer }/> : this.state.showCorrect ? <CorrectGuess /> : <IncorrectGuess /> 
+          this.state.showQuestion ? <Question question={ this.props.question } answer={ this.props.answer} showAnswer={ this.showAnswer }/> : this.state.showCorrect ? <CorrectGuess showQuestion={ this.showQuestion } /> : <IncorrectGuess /> 
         }
       </div>
     );
