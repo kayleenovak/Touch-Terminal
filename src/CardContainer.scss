@@ -2,6 +2,8 @@
 
 .card-container {
   height: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+      -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
 }

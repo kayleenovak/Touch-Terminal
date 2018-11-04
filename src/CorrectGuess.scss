@@ -6,7 +6,15 @@
   height: 400px;
   width: 300px;
   background: #00FFEC;
-  overflow: hidden;;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
 }
 
 .correct {
@@ -77,7 +85,7 @@
   transition: all .1s linear;
 }
 
-.gnext-card-btn:after{
+.next-card-btn:after{
   color:#e9e6e4;
   content: "";
   display: block;
