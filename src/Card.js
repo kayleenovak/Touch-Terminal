@@ -26,6 +26,7 @@ export default class Card extends Component {
         showCorrect: true
       })
     } else {
+      this.props.setStorage()
       this.setState({
         showQuestion: false,
         showIncorrect: true

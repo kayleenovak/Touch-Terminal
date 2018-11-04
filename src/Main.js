@@ -21,6 +21,10 @@ export default class Main extends Component {
     })
   }
 
+  recallFromLocalStorage = () => {
+
+  }
+
   render() {
     return (
       <div className='main'> 

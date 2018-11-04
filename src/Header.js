@@ -8,6 +8,7 @@ export default class Header extends Component {
       <header className='header'>
         <p>Touch Commands</p>
         <p>Score: { this.props.score }/{ this.props.numberOfQuestions }</p>
+        <button>Commands to Practice</button>
       </header>
     );
   }
