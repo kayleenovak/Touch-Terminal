@@ -30,6 +30,7 @@ export default class Main extends Component {
       const parsedQuestion = JSON.parse(localStorage[i])
       questions.push(parsedQuestion)
     }
+    this.props.chosenCommands.length = questions.length
     this.state.localStorage = questions
   }
 
@@ -38,6 +39,13 @@ export default class Main extends Component {
       showPractice: true
     })
     this.recallFromLocalStorage()
+    this.resetScore()
+  }
+
+  resetScore = () => {
+    this.setState({
+      score: 0
+    })
   }
 
   render() {
@@ -45,7 +53,7 @@ export default class Main extends Component {
       <div className='main'> 
         <Header score={ this.state.score } numberOfQuestions={ this.props.chosenCommands.length } showPractice={ this.showPractice } />
         { 
-          this.state.showPractice ? <Practice localStorage={ this.state.localStorage }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore }/>
+          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore }/>
         }
         <Footer />
       </div>
