@@ -1,0 +1,6 @@
+@import 'variables.scss';
+
+.main {
+  display: grid;
+  grid-auto-rows: 80px 1fr 40px;
+}

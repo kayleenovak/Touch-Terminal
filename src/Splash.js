@@ -1,19 +1,24 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Splash.scss'
 
 
 
 export default class Splash extends Component {
   render() {
     return (
-      <div> 
-        <h1>Touch Terminal</h1>
-        <h4>Add terminal skills to your developer toolbox</h4>
-        <input type='text' placeholder='Type your name here' />
-        <button>Submit</button>
-        <button>Beginner</button>
-        <button>Novice</button>
-        <button>Advanced</button>
-        <button onClick={ this.props.showSplash }>Start Learning</button>
+      <div className='splash-page'> 
+        <h1 className='touch-terminal'>Touch Terminal <span className='drop-shadow blinking'><FontAwesomeIcon icon="lightbulb"/></span></h1>
+        <h4 className='slogan'>Add terminal skills to your developer toolbox</h4>
+        <form>
+          <input className='name-input' type='text' placeholder='Type your name here' />
+          <button className='submit-name'>Submit</button>
+        </form>
+        <div>  
+          <button className='level-btn beginner' value='gitCommands' onClick={ this.props.choosePath }>Git Commands</button>
+          <button className='level-btn advanced' value='terminalCommands' onClick={ this.props.choosePath }>Terminal Commands</button>
+        </div>
+        <button className='start-learning' onClick={ this.props.showSplash }>Start Learning</button>
       </div>
     );
   }

@@ -1,0 +1,7 @@
+@import 'variables.scss';
+
+.card-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

@@ -2,18 +2,51 @@ import React, { Component } from 'react';
 import Main from './Main.js';
 import Splash from './Splash.js';
 import Footer from './Footer.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faLightbulb);
 
 class App extends Component {
   constructor() {
     super()
     this.state = {
-      showSplash: true
+      showSplash: true,
+      terminalCommands: [],
+      gitCommands: [],
+      chosenPath: '',
+      chosenCommands: []
     }
   }
 
-  showSplash = () => {
+  componentDidMount = () => {
+    fetch('https://memoize-datasets.herokuapp.com/api/v1/terminalCommands')
+      .then(response => response.json())
+      .then(terminalCommands => this.setState({
+        terminalCommands: terminalCommands.terminalCommands
+      }))
+      .catch(error => console.log(error));
+    fetch('https://memoize-datasets.herokuapp.com/api/v1/gitCommands')
+      .then(response => response.json())
+      .then(gitCommands => this.setState({
+        gitCommands: gitCommands.gitCommands
+      }))
+      .catch(error => console.log(error));
+  }
+
+  choosePath = (event) => {
+    let path = event.target.value
     this.setState({
-      showSplash: false
+      chosenPath: path
+    })
+  }
+
+  showSplash = (event) => {
+    let chosenPath = this.state[this.state.chosenPath]
+    console.log(chosenPath)
+    this.setState({
+      showSplash: false,
+      chosenCommands: chosenPath
     })
   }
 
@@ -21,7 +54,7 @@ class App extends Component {
     return (
       <div className="App">
       {
-        this.state.showSplash ? <Splash showSplash={ this.showSplash }/> : <Main />
+        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash }/> : <Main chosenCommands={ this.state.chosenCommands }/>
       }
       </div>
     );
