@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 .header {
+  display: flex;
   background: $med-blue;
   height: 80px;
 }
