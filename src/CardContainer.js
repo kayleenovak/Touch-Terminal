@@ -20,11 +20,10 @@ export default class CardContainer extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className='card-container'>
-          return(<Card answer={ this.props.chosenCommands[this.state.cardIndex].answer } question={ this.props.chosenCommands[this.state.cardIndex].question } nextCard={ this.nextCard } />)
+        <Card answer={ this.props.chosenCommands[this.state.cardIndex].answer } question={ this.props.chosenCommands[this.state.cardIndex].question } nextCard={ this.nextCard } />
       </div>
-    );
+    )
   }
 }
