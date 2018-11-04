@@ -6,7 +6,8 @@ export default class Header extends Component {
   render() {
     return (
       <header className='header'>
-        Touch Commands
+        <p>Touch Commands</p>
+        <p>Score: { this.props.score }/{ this.props.numberOfQuestions }</p>
       </header>
     );
   }
