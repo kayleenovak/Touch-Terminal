@@ -19,6 +19,7 @@ export default class Card extends Component {
     let guess = event.target.previousSibling.value
     let card = event.target.parentElement.parentElement;
     if(guess === this.props.answer) {
+      this.props.updateScore()
       this.flipCard(card);
       this.setState({
         showQuestion: false,

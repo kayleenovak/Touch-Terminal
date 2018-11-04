@@ -7,12 +7,25 @@ import './main.scss'
 
 
 export default class Main extends Component {
+  constructor() {
+    super()
+    this.state = {
+      score: 0
+    }
+  }
+
+  updateScore = () => {
+    let newScore = this.state.score + 1
+    this.setState({
+      score: newScore
+    })
+  }
 
   render() {
     return (
       <div className='main'> 
-        <Header />
-        <CardContainer chosenCommands={ this.props.chosenCommands }/>
+        <Header score={ this.state.score } numberOfQuestions={ this.props.chosenCommands.length }/>
+        <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore }/>
         <Footer />
       </div>
     );

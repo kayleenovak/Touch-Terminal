@@ -22,7 +22,7 @@ export default class CardContainer extends Component {
   render() {
     return (
       <div className='card-container'>
-        <Card answer={ this.props.chosenCommands[this.state.cardIndex].answer } question={ this.props.chosenCommands[this.state.cardIndex].question } nextCard={ this.nextCard } />
+        <Card answer={ this.props.chosenCommands[this.state.cardIndex].answer } question={ this.props.chosenCommands[this.state.cardIndex].question } nextCard={ this.nextCard } updateScore={ this.props.updateScore }/>
       </div>
     )
   }
