@@ -18,7 +18,6 @@ export default class Practice extends Component {
   }
 
   render() {
-    console.log(this.props.localStorage[0])
     return (
       <div className='practice'>
         <Card answer={ this.props.localStorage[this.state.cardIndex].answer } question={ this.props.localStorage[this.state.cardIndex].question } nextCard={ this.nextCard } updateScore={ this.props.updateScore }/>

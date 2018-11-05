@@ -29,9 +29,11 @@ export default class Main extends Component {
     for(let i = 0; i < localStorage.length; i++) {
       const parsedQuestion = JSON.parse(localStorage[i])
       questions.push(parsedQuestion)
+      
     }
     this.props.chosenCommands.length = questions.length
     this.state.localStorage = questions
+    console.log(this.state.localStorage)
   }
 
   showPractice = () => {

@@ -27,6 +27,7 @@ export default class Card extends Component {
       })
     } else {
       this.props.setStorage()
+      this.flipCard(card);
       this.setState({
         showQuestion: false,
         showIncorrect: true
@@ -54,7 +55,7 @@ export default class Card extends Component {
     return (
       <div className='card'> 
         {
-          this.state.showQuestion ? <Question question={ this.props.question } answer={ this.props.answer} showAnswer={ this.showAnswer } /> : this.state.showCorrect ? <CorrectGuess showQuestion={ this.showQuestion } /> : <IncorrectGuess /> 
+          this.state.showQuestion ? <Question question={ this.props.question } answer={ this.props.answer} showAnswer={ this.showAnswer } /> : this.state.showCorrect ? <CorrectGuess showQuestion={ this.showQuestion } /> : <IncorrectGuess showQuestion={ this.showQuestion }/> 
         }
       </div>
     );
