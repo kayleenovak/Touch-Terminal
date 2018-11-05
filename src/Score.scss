@@ -1,0 +1,48 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+.score {
+  height: 250px;
+  margin-top: 20px;
+  margin-right: 20px;
+  align-items: right;
+  box-shadow: 2px 2px 5px grey,
+              2px 2px 6px $yellow;
+  border-radius: 10px;
+  padding: 20px;
+  color: $black
+}
+
+.player-name {
+  width: 100%;
+  text-align: left;
+  font-size: 2.3em;
+  margin: 5px 0 10px 0;
+  border-bottom: 2px solid $med-blue;
+  font-family: 'Raleway', sans-serif;
+}
+
+.score-header {
+  width: 100%;
+  text-align: left;
+  margin: 10px 0 10px 0;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.player-score {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0 10px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.player-percentage {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0 10px 0;
+  font-family: 'Raleway', sans-serif;
+} 
