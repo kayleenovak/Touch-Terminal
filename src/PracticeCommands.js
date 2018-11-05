@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import './main.scss';
 
 
-export default class Footer extends Component {
+export default class PracticeCommands extends Component {
+
   render() {
     return (
-      <div className='footer'> 
+      <div className='practice-commands'>
       </div>
-    );
+    )
   }
 }

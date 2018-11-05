@@ -1,0 +1,26 @@
+@import 'variables';
+
+.level-btn {
+  height: 80px;
+  width: 150px;
+  margin: 10px;
+  font-size: 1.5em;
+  color: white;
+  border: none;
+}
+
+.beginner {
+  background-color: $drk-blue;
+}
+
+.advanced {
+  background-color: $black
+}
+
+.start-learning {
+  background: $yellow;
+  height: 40px;
+  color: $black;
+  border: none;
+  font-size: 20px;
+}

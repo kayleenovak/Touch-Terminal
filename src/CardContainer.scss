@@ -1,10 +1,9 @@
 @import 'variables.scss';
 
 .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
-  margin: auto;
-  -webkit-perspective: 800px;
-  -moz-perspective: 800px;
-  -o-perspective: 800px;
-  perspective: 800px;
+  perspective: 400px;
 }

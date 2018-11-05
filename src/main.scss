@@ -2,5 +2,30 @@
 
 .main {
   display: grid;
-  grid-auto-rows: 80px 1fr 40px;
+  grid-template-areas: 'header header'
+                       'card score'
+                       'card practice'
+                       'card practice'
+                       'footer footer';
+  grid-template-columns: 2fr 1fr;
+}
+
+.header {
+  grid-area: header;
+}
+
+.card-container {
+  grid-area: card;
+}
+
+.score {
+  grid-area: score;
+}
+
+.practice {
+  grid-area: practice-commands;
+}
+
+.footer {
+  grid-area: footer;
 }
