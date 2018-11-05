@@ -6,7 +6,8 @@
                        'card score'
                        'card practice'
                        'card practice'
-                       'footer footer'
+                       'footer footer';
+  grid-template-columns: 2fr 1fr;
 }
 
 .header {
@@ -22,7 +23,7 @@
 }
 
 .practice {
-  grid-area: practice;
+  grid-area: practice-commands;
 }
 
 .footer {

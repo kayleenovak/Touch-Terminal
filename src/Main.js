@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Footer from './Footer.js';
 import CardContainer from './CardContainer.js';
-import Header from './Header.js'
-import Practice from './Practice.js'
-import './main.scss'
+import Header from './Header.js';
+import Practice from './Practice.js';
+import PracticeCommands from './PracticeCommands.js';
+import Score from './Score.js'
+import './main.scss';
 
 
 
