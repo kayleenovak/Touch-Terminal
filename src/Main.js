@@ -57,6 +57,8 @@ export default class Main extends Component {
         { 
           this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore }/>
         }
+        <Score />
+        <PracticeCommands />
         <Footer />
       </div>
     );
