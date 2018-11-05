@@ -1,4 +1,6 @@
 @import 'variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .splash-page {
   background-color: $med-blue;
@@ -13,6 +15,7 @@
 }
 
 .touch-terminal {
+  font-family: 'Permanent Marker', cursive;
   margin: 0;
   color: $black;
   font-size: 5em;
@@ -27,6 +30,7 @@
 
 .slogan {
   margin: 0 0 30px 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 .drop-shadow{

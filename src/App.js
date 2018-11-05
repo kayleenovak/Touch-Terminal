@@ -15,7 +15,8 @@ class App extends Component {
       terminalCommands: [],
       gitCommands: [],
       chosenPath: '',
-      chosenCommands: []
+      chosenCommands: [],
+      playerName: null
     }
   }
 
@@ -43,10 +44,18 @@ class App extends Component {
 
   showSplash = (event) => {
     let chosenPath = this.state[this.state.chosenPath]
-    console.log(chosenPath)
     this.setState({
       showSplash: false,
       chosenCommands: chosenPath
+    })
+  }
+
+  setPlayerName = (event) => {
+    event.preventDefault()
+    let name = event.target.previousSibling.value
+    console.log(name)
+    this.setState({
+      playerName: name
     })
   }
 
@@ -54,7 +63,7 @@ class App extends Component {
     return (
       <div className="App">
       {
-        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash }/> : <Main chosenCommands={ this.state.chosenCommands }/>
+        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName }/> : <Main chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName }/>
       }
       </div>
     );

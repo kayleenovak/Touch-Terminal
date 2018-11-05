@@ -53,7 +53,7 @@ export default class Main extends Component {
   render() {
     return (
       <div className='main'> 
-        <Header score={ this.state.score } numberOfQuestions={ this.props.chosenCommands.length } showPractice={ this.showPractice } />
+        <Header score={ this.state.score } numberOfQuestions={ this.props.chosenCommands.length } showPractice={ this.showPractice } playerName={ this.props.playerName }/>
         { 
           this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore }/>
         }
