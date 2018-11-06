@@ -16,8 +16,17 @@ export default class Main extends Component {
       score: 0,
       percentage: 0,
       showPractice: false,
+      incorrectAnswers: [],
       localStorage: []
     }
+  }
+
+  checkIncorrectAnswers = (incorrect) => {
+    let incorrectAnswers = this.state.incorrectAnswers
+    incorrectAnswers.push(incorrect)
+    this.setState({
+      incorrectAnswers:  incorrectAnswers
+    })
   }
 
   updateScore = () => {
@@ -58,10 +67,10 @@ export default class Main extends Component {
       <div className='main'> 
         <Header />
         { 
-          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore }/>
+          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } checkIncorrectAnswers={ this.checkIncorrectAnswers }/>
         }
         <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.chosenCommands.length } percentage={ this.state.percentage }/>
-        <PracticeCommands showPractice={ this.showPractice }/>
+        <PracticeCommands showPractice={ this.showPractice } incorrectAnswers={ this.state.incorrectAnswers }/>
         <Footer />
       </div>
     );

@@ -11,6 +11,11 @@ export default class PracticeCommands extends Component {
       <div className='practice-commands'>
         <h2 className='practice-commands-header'>Commands to Practice:</h2>
         <ul className='command-list'>
+        {
+          this.props.incorrectAnswers.map(answer => {
+            return <Command answer={ answer } />
+          })
+        }
         </ul>
         <button onClick={ this.props.showPractice }>Commands to Practice</button>
       </div>
