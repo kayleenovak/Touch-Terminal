@@ -59,7 +59,11 @@ export default class Main extends Component {
   resetScore = (event) => {
     console.log(event)
     if(event.target.value === 'gitCommands' || event.target.value === 'terminalCommands') {
+      localStorage.clear()
       this.props.resetPath(event)
+      this.setState({
+        showPractice: false
+      })
     }
     this.setState({
       score: 0,
