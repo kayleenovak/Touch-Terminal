@@ -8,7 +8,6 @@ export default class Header extends Component {
     return (
       <header className='header'>
         <p>Touch Commands</p>
-        <button onClick={ this.props.showPractice }>Commands to Practice</button>
       </header>
     );
   }
