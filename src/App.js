@@ -42,6 +42,14 @@ class App extends Component {
     })
   }
 
+  resetPath = (event) => {
+    let chosenPath = this.state[event.target.value]
+    this.setState({
+      chosenPath: event.target.value,
+      chosenCommands: chosenPath
+    })
+  }
+
   showSplash = (event) => {
     let chosenPath = this.state[this.state.chosenPath]
     this.setState({
@@ -63,7 +71,7 @@ class App extends Component {
     return (
       <div className="App">
       {
-        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName }/> : <Main chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName }/>
+        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName }/> : <Main chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName } chosenPath={ this.state.chosenPath } resetPath={ this.resetPath }/>
       }
       </div>
     );
