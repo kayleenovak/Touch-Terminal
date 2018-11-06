@@ -7,7 +7,7 @@ export default class PracticeCommands extends Component {
 
   render() {
     return (
-      <li>{ this.props.answer } </li>
+      <li className='practice-command'>{ this.props.answer }</li>
     )
   }
 }

@@ -17,7 +17,7 @@ export default class PracticeCommands extends Component {
           })
         }
         </ul>
-        <button onClick={ this.props.showPractice }>Commands to Practice</button>
+        <button className='practice-btn' onClick={ this.props.showPractice }>Commands to Practice</button>
       </div>
     )
   }
