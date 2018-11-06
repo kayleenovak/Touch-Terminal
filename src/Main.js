@@ -56,16 +56,18 @@ export default class Main extends Component {
     this.resetScore()
   }
 
-  resetScore = () => {
+  resetScore = (event) => {
+    this.props.resetPath(event)
     this.setState({
-      score: 0
+      score: 0,
+      percentage: 0
     })
   }
 
   render() {
     return (
       <div className='main'> 
-        <Header chosenPath={ this.props.chosenPath } resetPath={ this.props.resetPath }/>
+        <Header chosenPath={ this.props.chosenPath } resetScore={ this.resetScore }/>
         { 
           this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } checkIncorrectAnswers={ this.checkIncorrectAnswers }/>
         }
