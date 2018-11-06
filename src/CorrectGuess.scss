@@ -9,34 +9,19 @@
 }
 
 .correct {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  top: -25px;
-  font-size: 2.2em;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800;
+  @include card-header()
 }
 
 .lightbulb {
   @include lightbulb();
-  filter: drop-shadow(6px 8px 25px #F9FF59) drop-shadow(-6px -8px 15px #F9FF59);
 }
 
 .cloud-one {
-  height: 243px;
-  position: absolute;
-  top: 30px;
-  right: 301px;
-  filter: drop-shadow(-2px -2px 5px grey);
+  @include cloud(243px, 30px, 301px, -2px, 5px, grey)
 }
 
 .cloud-two {
-  height: 137px;
-  position: absolute;
-  top: 181px;
-  right: 201px;
-  filter: drop-shadow(-4px -4px 10px grey);
+  @include cloud(137px, 181px, 201px, -4px, 10px, grey)
 }
 
 .wave {
@@ -44,5 +29,5 @@
 }
 
 .next-card-btn {
-  @include white-btn(217px, 277px, 200px)
+  @include white-btn(322px, 249px, 200px)
 }

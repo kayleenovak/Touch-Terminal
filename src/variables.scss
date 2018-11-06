@@ -5,6 +5,16 @@ $yellow: #F9FF59;
 $black: #3C4856;
 $white: #FFFFFF;
 
+@mixin card-header() {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  top: -25px;
+  font-size: 2.2em;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
 @mixin wave() {
   background: $white;
   height: 210px;
@@ -84,11 +94,16 @@ $white: #FFFFFF;
 }
 
 
-@mixin cloud() {
-
+@mixin cloud($height, $top, $right, $placement, $blur, $color) {
+  height: $height;
+  position: absolute;
+  top: $top;
+  right: $right;
+  filter: drop-shadow($placement $placement $blur $color);
 }
 
 @mixin lightbulb() {
+  filter: drop-shadow(6px 8px 25px #F9FF59) drop-shadow(-6px -8px 15px #F9FF59);
   height: 328px;
   width: 277px;
   position: absolute;

@@ -7,7 +7,9 @@ export default class IncorrectGuess extends Component {
     return (
       <div className='incorrect-guess'> 
         <div className='wave'></div>
+        <img src='./images/cloud-dark.svg' className='cloud-one'/>
         <img src='./images/lightbulb-out.svg' className='lightbulb-out'/>
+        <img src='./images/cloud-dark.svg' className='cloud-two'/>
         <p className='incorrect'>Incorrect</p>
         <button className='next-card' onClick={ this.props.showQuestion }>Next Card</button>
       </div>
