@@ -9,14 +9,8 @@
   width: 700px;
   background: #00FFEC;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: rotateY( 180deg );
-  -moz-transform: rotateY( 180deg );
-  -o-transform: rotateY( 180deg );
-  transform: rotateY( 180deg );
+  transform: rotateY(180deg);
 }
 
 .correct {
@@ -34,7 +28,7 @@
     width: 277px;
     position: absolute;
     top: 30px;
-    right: 209px;
+    right: 216px;
     -webkit-filter: drop-shadow(6px 8px 25px #F9FF59) drop-shadow(-6px -8px 15px #F9FF59);
     filter: drop-shadow(6px 8px 25px #F9FF59) drop-shadow(-6px -8px 15px #F9FF59);
 }
@@ -71,7 +65,7 @@
   height: 80px;
   background-color: #00FFEC;
   right: -5px;
-  top: 167px;
+  top: 162px;
 }
 
 .wave:after {
@@ -83,13 +77,13 @@
   height: 70px;
   background-color: white;
   left: 0;
-  top: 150px;
+  top: 147px;
 }
 
 .next-card-btn {
   position: absolute;
-  top: 210px;
-  left: 255px;
+  top: 217px;
+  left: 277px;
   font-size: 1.3em;
   font-weight: 600;
   color: $black;

@@ -9,7 +9,7 @@ export default class IncorrectGuess extends Component {
         <div className='wave'></div>
         <img src='./images/lightbulb-out.svg' className='lightbulb-out'/>
         <p className='incorrect'>Incorrect</p>
-        <button className='next-card-btn' onClick={ this.props.showQuestion }>Next Card</button>
+        <button className='next-card' onClick={ this.props.showQuestion }>Next Card</button>
       </div>
     );
   }

@@ -36,7 +36,7 @@
   height: 80px;
   background-color: #00FFEC;
   right: -5px;
-  top: 178px;
+  top: 162px;
 }
 .wave:after {
   content: "";
@@ -47,7 +47,7 @@
   height: 70px;
   background-color: white;
   left: 0;
-  top: 169px;
+  top: 147px;
 }
 
 .lightbulb-out {
@@ -60,11 +60,11 @@
 
 .next-card-btn {
   position: absolute;
-  top: 270px;
-  left: 85px;
+  top: 322px;
+  left: 245px;
 }
 
-.next-card-btn {
+.next-card {
   background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
   background-image: linear-gradient(top, #f4f1ee, #fff);
   border-radius: 25px;
@@ -78,7 +78,7 @@
   transition: all .1s linear;
 }
 
-.next-card-btn:after{
+.next-card:after{
   color:#e9e6e4;
   content: "";
   display: block;
@@ -90,7 +90,7 @@
   width: 30px;
 }
 
-.next-card-btn:hover{
+.next-card:hover{
   background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
   background-image: linear-gradient(top, #fff, #f4f1ee);
   color:#0088cc;
