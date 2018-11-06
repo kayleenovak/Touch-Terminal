@@ -65,7 +65,7 @@ export default class Main extends Component {
   render() {
     return (
       <div className='main'> 
-        <Header />
+        <Header chosenPath={ this.props.chosenPath } resetPath={ this.props.resetPath }/>
         { 
           this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } checkIncorrectAnswers={ this.checkIncorrectAnswers }/>
         }
