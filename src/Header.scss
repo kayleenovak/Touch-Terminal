@@ -1,6 +1,7 @@
 @import 'variables.scss';
 
 .header {
+  position: relative;
   display: flex;
   background: $med-blue;
   height: 110px;
@@ -13,4 +14,26 @@
   font-size: 3.8em;
   font-family: $marker;
   color: $black;
+}
+
+.header-buttons {
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+}
+
+.header-button {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 5px;
+  font-size: .9em;
+  font-weight: 600;
+  margin-left: 12px;
+  color: $black;
+}
+
+.header-button:hover {
+  border-bottom: 3px solid white;
+  color: white;
 }

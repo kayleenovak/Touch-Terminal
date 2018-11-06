@@ -48,16 +48,19 @@ export default class Main extends Component {
     this.state.localStorage = questions
   }
 
-  showPractice = () => {
+  showPractice = (event) => {
     this.setState({
       showPractice: true
     })
     this.recallFromLocalStorage()
-    this.resetScore()
+    this.resetScore(event)
   }
 
   resetScore = (event) => {
-    this.props.resetPath(event)
+    console.log(event)
+    if(event.target.value === 'gitCommands' || event.target.value === 'terminalCommands') {
+      this.props.resetPath(event)
+    }
     this.setState({
       score: 0,
       percentage: 0
@@ -67,7 +70,7 @@ export default class Main extends Component {
   render() {
     return (
       <div className='main'> 
-        <Header chosenPath={ this.props.chosenPath } resetScore={ this.resetScore }/>
+        <Header chosenPath={ this.props.chosenPath } resetScore={ this.resetScore } showPractice={ this.showPractice }/>
         { 
           this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } checkIncorrectAnswers={ this.checkIncorrectAnswers }/>
         }
