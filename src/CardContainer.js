@@ -25,14 +25,13 @@ export default class CardContainer extends Component {
     let incorrectAnswer = this.props.chosenCommands[this.state.cardIndex]
     let id = this.state.localStorageIndex
     this.state.localStorageIndex = this.state.localStorageIndex + 1
-
     localStorage.setItem(id, JSON.stringify(incorrectAnswer))
   }
 
   render() {
     return (
       <div className='card-container'>
-        <Card answer={ this.props.chosenCommands[this.state.cardIndex].answer } question={ this.props.chosenCommands[this.state.cardIndex].question } nextCard={ this.nextCard } updateScore={ this.props.updateScore } setStorage={ this.setToLocalStorage }/>
+        <Card answer={ this.props.chosenCommands[this.state.cardIndex].answer } question={ this.props.chosenCommands[this.state.cardIndex].question } nextCard={ this.nextCard } updateScore={ this.props.updateScore } setStorage={ this.setToLocalStorage } checkIncorrectAnswers={ this.props.checkIncorrectAnswers }/>
       </div>
     )
   }

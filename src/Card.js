@@ -26,6 +26,7 @@ export default class Card extends Component {
         showCorrect: true
       })
     } else {
+      this.props.checkIncorrectAnswers(this.props.answer)
       this.props.setStorage()
       this.flipCard(card);
       this.setState({
