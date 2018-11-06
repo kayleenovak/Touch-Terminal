@@ -3,15 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .question-container {
-  background: #00FFEC;
-  height: 400px;
-  width: 700px;
-  overflow: hidden;
-  position: relative;
-  color: $black;
-  border: 4px solid #EAEDF1;
-  text-align: center;
-  box-shadow: 2px 2px 10px $black;
+  @include card-layout();
 }
 
 .question, .guess-input, .guess-btn, .directions {
@@ -39,14 +31,12 @@
 .guess-input {
   width: 400px;
   height: 40px;
-  position: absolute;
   bottom: 55px;
   left: 40px;
   border: 2px solid $yellow;
 }
 
 .guess-btn {
-  position: absolute;
   top: 295px;
   left: 485px;
   font-family: 'Raleway', sans-serif;
@@ -54,19 +44,17 @@
 }
 
 .guess-btn {
-  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
   background-image: linear-gradient(top, #f4f1ee, #fff);
   border-radius: 25px;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  color: $black;
   float:left;
+  font-weight: 600;
   height: 50px;
   margin: 0 30px 30px 0;
   position: relative;
-  width: 180px;      
-  -webkit-transition: all .1s linear;
   transition: all .1s linear;
-  font-weight: 600;
-  color: $black;
+  width: 180px;      
 }
 
 .guess-btn:after{
