@@ -3,7 +3,7 @@
 .question-container {
   background: #00FFEC;
   height: 400px;
-  width: 300px;
+  width: 700px;
   overflow: hidden;
   position: relative;
   color: $black;
@@ -18,7 +18,7 @@
 .wave {
   position: absolute;
   height: 210px;
-  width: 300px;
+  width: 701px !important;
   background: white;
 }
 
@@ -27,8 +27,8 @@
   display: block;
   position: absolute;
   border-radius: 100% 50%;
-  width: 170px;
-  height: 80px;
+  width: 370px !important;
+  height: 100px !important;
   background-color: #00FFEC;
   right: -5px;
   top: 178px;
@@ -38,8 +38,8 @@
   display: block;
   position: absolute;
   border-radius: 100% 50%;
-  width: 150px;
-  height: 70px;
+  width: 370px !important;
+  height: 100px !important;
   background-color: white;
   left: 0;
   top: 169px;
