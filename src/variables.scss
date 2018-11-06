@@ -1,9 +1,12 @@
 $drk-blue: #002A6C;
-$med-blue: #45adf9;
-$light-blue: #00FFEC;
+$med-blue: #00DAF9;
+$light-blue: #00DAF9;
 $yellow: #F9FF59;
 $black: #3C4856;
 $white: #FFFFFF;
+$raleway: 'Raleway', sans-serif;
+$marker: 'Permanent Marker', cursive;
+
 
 @mixin card-header() {
   position: relative;
@@ -11,7 +14,7 @@ $white: #FFFFFF;
   text-align: center;
   top: -25px;
   font-size: 2.2em;
-  font-family: 'Raleway', sans-serif;
+  font-family: $raleway;
   font-weight: 800;
 }
 
