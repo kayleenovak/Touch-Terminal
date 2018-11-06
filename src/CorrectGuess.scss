@@ -4,8 +4,7 @@
 
 .correct-guess {
   @include card-layout();
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
+  @include backOfCard();
 }
 
 .correct {

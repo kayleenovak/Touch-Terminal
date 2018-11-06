@@ -58,6 +58,11 @@ $white: #FFFFFF;
   width: 700px;
 }
 
+@mixin backOfCard() {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
 @mixin white-btn($top, $left, $width) {
   background-image: linear-gradient(top, #f4f1ee, $white);
   border-radius: 25px;

@@ -1,9 +1,8 @@
 @import './variables.scss';
 
 .incorrect-guess {
+  @include backOfCard();
   @include card-layout();
-  backface-visibility: hidden;
-  transform: rotateY(180deg);
 }
 
 .incorrect {
