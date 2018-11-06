@@ -4,3 +4,34 @@ $light-blue: #107E7D;
 $plum: #610345;
 $yellow: #F9FF59;
 $black: #3C4856;
+
+@mixin wave() {
+  background: white;
+  height: 210px;
+  position: absolute;
+  width: 701px !important;
+
+  &:before {
+    background-color: #00FFEC;
+    border-radius: 100% 50%;
+    content: "";
+    display: block;
+    height: 100px;
+    position: absolute;
+    right: -5px;
+    top: 162px;
+    width: 370px;
+  }
+  
+  &:after {
+    background-color: white;
+    border-radius: 100% 50%;
+    content: "";
+    display: block;
+    height: 100px;
+    left: 0;
+    position: absolute;
+    top: 147px;
+    width: 370px;
+  }
+}
