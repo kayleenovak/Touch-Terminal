@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+.practice-commands {
+  height: 100%;
+  width: 100%;
+  box-shadow: 2px 2px 5px grey;
+}
+
+.practice-commands-header {
+
+}
+
+.command-list {
+  overflow: scroll;
+}

@@ -23,7 +23,6 @@ export default class Main extends Component {
   updateScore = () => {
     let newScore = this.state.score + 1
     let percentage = Math.floor((newScore / this.props.chosenCommands.length) * 100)
-    console.log(percentage)
     this.setState({
       score: newScore,
       percentage: percentage
@@ -35,7 +34,6 @@ export default class Main extends Component {
     for(let i = 0; i < localStorage.length; i++) {
       const parsedQuestion = JSON.parse(localStorage[i])
       questions.push(parsedQuestion)
-      
     }
     this.props.chosenCommands.length = questions.length
     this.state.localStorage = questions
@@ -58,12 +56,12 @@ export default class Main extends Component {
   render() {
     return (
       <div className='main'> 
-        <Header showPractice={ this.showPractice } />
+        <Header />
         { 
           this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore }/>
         }
         <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.chosenCommands.length } percentage={ this.state.percentage }/>
-        <PracticeCommands />
+        <PracticeCommands showPractice={ this.showPractice }/>
         <Footer />
       </div>
     );

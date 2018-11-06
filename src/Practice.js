@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import './main.scss'
 
 
 export default class Practice extends Component {
@@ -19,7 +20,7 @@ export default class Practice extends Component {
 
   render() {
     return (
-      <div className='practice'>
+      <div className='card-container'>
         <Card answer={ this.props.localStorage[this.state.cardIndex].answer } question={ this.props.localStorage[this.state.cardIndex].question } nextCard={ this.nextCard } updateScore={ this.props.updateScore }/>
       </div>
     )

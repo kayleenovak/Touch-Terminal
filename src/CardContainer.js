@@ -25,7 +25,6 @@ export default class CardContainer extends Component {
     let incorrectAnswer = this.props.chosenCommands[this.state.cardIndex]
     let id = this.state.localStorageIndex
     this.state.localStorageIndex = this.state.localStorageIndex + 1
-
     localStorage.setItem(id, JSON.stringify(incorrectAnswer))
   }
 
