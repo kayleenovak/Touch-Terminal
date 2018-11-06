@@ -21,33 +21,7 @@
 }
 
 .wave {
-  position: absolute;
-  height: 210px;
-  width: 300px;
-  background: white;
-}
-
-.wave:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 170px;
-  height: 80px;
-  background-color: #00FFEC;
-  right: -5px;
-  top: 162px;
-}
-.wave:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 150px;
-  height: 70px;
-  background-color: white;
-  left: 0;
-  top: 147px;
+  @include wave();
 }
 
 .lightbulb-out {
