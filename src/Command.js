@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Command.scss'
 import './main.scss';
 
 

@@ -1,48 +1,25 @@
 @import './variables';
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
 
 .score {
-  height: 250px;
-  margin-top: 20px;
-  margin-right: 20px;
-  align-items: right;
+  border-radius: 10px;
   box-shadow: 2px 2px 5px grey,
               2px 2px 6px $yellow;
-  border-radius: 10px;
+  color: $black;
+  height: 250px;
+  margin-right: 20px;
+  margin-top: 20px;
   padding: 20px;
-  color: $black
 }
 
 .player-name {
-  width: 100%;
-  text-align: left;
-  font-size: 2.3em;
-  margin: 5px 0 10px 0;
+  @include score(left, 2.3em, 5px, 0, 10px, 0, $raleway)
   border-bottom: 2px solid $med-blue;
-  font-family: 'Raleway', sans-serif;
 }
 
 .score-header {
-  width: 100%;
-  text-align: left;
-  margin: 10px 0 10px 0;
-  font-family: 'Permanent Marker', cursive;
+  @include score(left, 1.5em, 10px, 0, 10px, 0, $marker)
 }
 
-.player-score {
-  width: 100%;
-  text-align: center;
-  font-size: 2.5em;
-  margin: 20px 0 10px 0;
-  font-family: 'Raleway', sans-serif;
+.player-score, .player-percentage {
+  @include score(center, 2.5em, 20px, 0, 10px, 0, $raleway)
 }
-
-.player-percentage {
-  width: 100%;
-  text-align: center;
-  font-size: 2.5em;
-  margin: 20px 0 10px 0;
-  font-family: 'Raleway', sans-serif;
-} 

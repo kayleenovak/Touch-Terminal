@@ -10,6 +10,7 @@ export default class NameInput extends Component {
       showNameInput: true
     }
   }
+
   render() {
     return (
         <form>

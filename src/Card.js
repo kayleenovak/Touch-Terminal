@@ -27,7 +27,9 @@ export default class Card extends Component {
       })
     } else {
       this.props.checkIncorrectAnswers(this.props.answer)
-      this.props.setStorage()
+      if(this.props.setStorage !== undefined) {
+        this.props.setStorage()
+      }
       this.flipCard(card);
       this.setState({
         showQuestion: false,
@@ -48,7 +50,6 @@ export default class Card extends Component {
   }
 
   flipCard = (parent) => {
-    console.log(parent)
     parent.classList.toggle('flipped')
   }
 

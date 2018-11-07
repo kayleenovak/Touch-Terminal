@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import FinalScore from './FinalScore.js'
 import './main.scss'
 
 
 export default class Practice extends Component {
-  constructor() {
-    super()
-    this.state = {
-      cardIndex: 0
-    }
-  }
-
-  nextCard = () => {
-    let newIndex = this.state.cardIndex + 1
-    this.setState({
-      cardIndex: newIndex
-    })
-  }
 
   render() {
     return (
       <div className='card-container'>
-        <Card answer={ this.props.localStorage[this.state.cardIndex].answer } question={ this.props.localStorage[this.state.cardIndex].question } nextCard={ this.nextCard } updateScore={ this.props.updateScore }/>
+        {
+          this.props.showFinalScore ? <FinalScore resetScore={ this.props.resetScore } chosenPath={ this.props.chosenPath } playerScore={ this.props.playerScore } playerName={ this.props.playerName } /> : <Card answer={ this.props.localStorage[this.props.cardIndex].answer } question={ this.props.localStorage[this.props.cardIndex].question } nextCard={ this.props.nextCard } updateScore={ this.props.updateScore } checkIncorrectAnswers={ this.props.checkIncorrectAnswers }/>
+        }
       </div>
     )
   }

@@ -1,6 +1,4 @@
 @import 'variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .splash-page {
   background-color: $med-blue;
@@ -15,28 +13,23 @@
 }
 
 .touch-terminal {
-  font-family: 'Permanent Marker', cursive;
-  margin: 0;
   color: $black;
+  font-family: $marker;
   font-size: 5em;
+  margin: 0;
   text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
              0px 8px 13px rgba(0,0,0,0.1),
              0px 18px 23px rgba(0,0,0,0.1);
 }
 
-.far {
-  font-size: 50px;
-}
-
 .slogan {
+  font-family: $raleway;
   margin: 0 0 30px 0;
-  font-family: 'Raleway', sans-serif;
 }
 
 .drop-shadow{
-  -webkit-filter:drop-shadow(-8px -8px -2px $yellow);      
-/*  filter: drop-shadow(6px 8px 35px $yellow) drop-shadow(6px 8px 25px $yellow) drop-shadow(6px 8px 15px $yellow);*/
   animation: glowing 1000ms infinite;
+  -webkit-filter: drop-shadow(-8px -8px -2px $yellow);      
 }
 
 @keyframes glowing {
