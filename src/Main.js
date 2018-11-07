@@ -30,15 +30,12 @@ export default class Main extends Component {
   }
 
   nextCard = () => {
-    console.log(this.state.cardIndex)
     let newIndex = this.state.cardIndex + 1
-    console.log(newIndex)
-    if (this.state.cardIndex < this.props.chosenCommands.length - 1) {
+    if (this.state.cardIndex < this.props.numberOfQuestions - 1) {
       this.setState({
         cardIndex: newIndex
       })
     } else {
-      console.log(1)
       this.setState({
         showFinalScore: true
       })
@@ -47,7 +44,7 @@ export default class Main extends Component {
 
   updateScore = () => {
     let newScore = this.state.score + 1
-    let percentage = Math.floor((newScore / this.props.chosenCommands.length) * 100)
+    let percentage = Math.floor((newScore / this.props.numberOfQuestions) * 100)
     this.setState({
       score: newScore,
       percentage: percentage
@@ -60,7 +57,8 @@ export default class Main extends Component {
       const parsedQuestion = JSON.parse(localStorage[i])
       questions.push(parsedQuestion)
     }
-    this.props.chosenCommands.length = questions.length
+    let numOfQuestions = questions.length
+    this.props.practice(numOfQuestions)
     this.state.localStorage = questions
   }
 
@@ -96,7 +94,7 @@ export default class Main extends Component {
         { 
           this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore } /> : <CardContainer finalScore={ this.state.showFinalScore } nextCard={ this.nextCard } cardIndex={ this.state.cardIndex } chosenPath={ this.props.chosenPath } chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } resetScore={ this.resetScore } checkIncorrectAnswers={ this.checkIncorrectAnswers } playerScore={ this.state.percentage } playerName={ this.props.playerName } />
         }
-        <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.chosenCommands.length } percentage={ this.state.percentage } />
+        <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.numberOfQuestions } percentage={ this.state.percentage } />
         <PracticeCommands showPractice={ this.showPractice } incorrectAnswers={ this.state.incorrectAnswers } />
         <Footer />
       </div>

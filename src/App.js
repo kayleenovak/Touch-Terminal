@@ -16,6 +16,7 @@ class App extends Component {
       gitCommands: [],
       chosenPath: '',
       chosenCommands: [],
+      numberOfQuestions: 0,
       playerName: null
     }
   }
@@ -46,7 +47,14 @@ class App extends Component {
     let chosenPath = this.state[event.target.value]
     this.setState({
       chosenPath: event.target.value,
-      chosenCommands: chosenPath
+      chosenCommands: chosenPath,
+      numberOfQuestions: chosenPath.length
+    })
+  }
+
+  practice = (numOfQ) => {
+    this.setState({
+      numberOfQuestions: numOfQ
     })
   }
 
@@ -54,7 +62,8 @@ class App extends Component {
     let chosenPath = this.state[this.state.chosenPath]
     this.setState({
       showSplash: false,
-      chosenCommands: chosenPath
+      chosenCommands: chosenPath,
+      numberOfQuestions: chosenPath.length
     })
   }
 
@@ -70,7 +79,7 @@ class App extends Component {
     return (
       <div className="App">
       {
-        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName } /> : <Main playerName={ this.state.playerName } chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName } chosenPath={ this.state.chosenPath } resetPath={ this.resetPath } />
+        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName } /> : <Main practice={ this.practice } numberOfQuestions={ this.state.numberOfQuestions } playerName={ this.state.playerName } chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName } chosenPath={ this.state.chosenPath } resetPath={ this.resetPath } />
       }
       </div>
     );
