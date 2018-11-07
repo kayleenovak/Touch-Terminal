@@ -1,11 +1,14 @@
 @import 'variables.scss';
 
-
 .name-input {
-  width: 300px;
-  height: 30px;
+  width: 350px;
+  height: 35px;
   border-radius: 10px;
   border: 2px solid $yellow;
+  padding: 1px 2px 2px 8px;
+  font-size: 20px;
+  font-family: $raleway;
+  font-weight: 600;
 }
 
 .submit-name {
@@ -13,6 +16,6 @@
   background-color: $yellow;
 }
 
-.name-input:placeholder {
+.name-input::placeholder {
   font-size: 20px;
 }
