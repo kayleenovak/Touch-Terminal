@@ -10,7 +10,7 @@ export default class FinalScore extends Component {
     return (
       <div className='final-score-container'>
         {
-          this.props.percentage < 65 ? <LowScore /> : this.props.percentage > 99 ? <PerfectScore /> : <MidScore /> 
+          this.props.playerScore < 65 ? <LowScore playerName={ this.props.playerName } playerScore={ this.props.playerScore }/> : this.props.percentage > 99 ? <PerfectScore playerName={ this.props.playerName }/> : <MidScore playerName={ this.props.playerName } playerScore={ this.props.playerScore }/> 
         }
       </div>
     )

@@ -71,7 +71,7 @@ class App extends Component {
     return (
       <div className="App">
       {
-        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName }/> : <Main chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName } chosenPath={ this.state.chosenPath } resetPath={ this.resetPath }/>
+        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName }/> : <Main playerName={ this.state.playerName }chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName } chosenPath={ this.state.chosenPath } resetPath={ this.resetPath }/>
       }
       </div>
     );
