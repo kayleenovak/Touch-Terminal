@@ -15,6 +15,7 @@ export default class Splash extends Component {
   }
 
   showOptions = (event) => {
+    console.log(1)
     event.preventDefault()
     this.props.setPlayerName(event)
     this.setState({

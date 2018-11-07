@@ -1,30 +1,32 @@
 @import 'variables.scss';
 
 .name-input {
-  width: 350px;
-  height: 35px;
+  @include med-weight-font()
   border-radius: 10px;
   border: 3px solid $yellow;
-  padding: 1px 2px 2px 8px;
   font-size: 20px;
-  font-family: $raleway;
-  font-weight: 600;
+  height: 35px;
+  padding: 1px 2px 2px 8px;
+  width: 350px;
 }
 
 .submit-name {
-  height: 80px;
-  width: 80px;
-  border-radius: 40px;
+  @include med-weight-font()
   background-color: $yellow;
-  margin-left: 10px;
+  border-radius: 40px;
   border: 1px solid $black;
   font-size: 16px;
-  color: $black;
-  font-weight: 600;
+  height: 80px;
+  margin-left: 10px;
+  width: 80px;
 }
 
 .submit-name:hover {
-  background-color: white;
+  background-color: $white;
+}
+
+.submit-name:disabled {
+  background: grey;
 }
 
 .name-input::placeholder {

@@ -7,7 +7,11 @@ $white: #FFFFFF;
 $raleway: 'Raleway', sans-serif;
 $marker: 'Permanent Marker', cursive;
 
-
+@mixin med-weight-font() {
+  font-weight: 600;
+  color: $black;
+  font-family: $raleway;
+}
 @mixin card-header() {
   position: relative;
   width: 100%;
