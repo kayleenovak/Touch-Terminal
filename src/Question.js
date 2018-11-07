@@ -4,6 +4,7 @@ import './Question.scss'
 
 
 export default class Question extends Component {
+  
   render() {
     return (
       <div className='question-container'>

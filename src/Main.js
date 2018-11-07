@@ -7,8 +7,6 @@ import PracticeCommands from './PracticeCommands.js';
 import Score from './Score.js'
 import './main.scss';
 
-
-
 export default class Main extends Component {
   constructor() {
     super()
@@ -75,12 +73,12 @@ export default class Main extends Component {
   render() {
     return (
       <div className='main'> 
-        <Header chosenPath={ this.props.chosenPath } resetScore={ this.resetScore } showPractice={ this.showPractice }/>
+        <Header chosenPath={ this.props.chosenPath } resetScore={ this.resetScore } showPractice={ this.showPractice } />
         { 
-          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenPath={ this.props.chosenPath } chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } resetScore={ this.resetScore } checkIncorrectAnswers={ this.checkIncorrectAnswers } playerScore={ this.state.percentage } playerName={ this.props.playerName }/>
+          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore } /> : <CardContainer chosenPath={ this.props.chosenPath } chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } resetScore={ this.resetScore } checkIncorrectAnswers={ this.checkIncorrectAnswers } playerScore={ this.state.percentage } playerName={ this.props.playerName } />
         }
-        <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.chosenCommands.length } percentage={ this.state.percentage }/>
-        <PracticeCommands showPractice={ this.showPractice } incorrectAnswers={ this.state.incorrectAnswers }/>
+        <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.chosenCommands.length } percentage={ this.state.percentage } />
+        <PracticeCommands showPractice={ this.showPractice } incorrectAnswers={ this.state.incorrectAnswers } />
         <Footer />
       </div>
     );

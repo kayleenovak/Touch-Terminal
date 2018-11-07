@@ -48,7 +48,6 @@ export default class Card extends Component {
   }
 
   flipCard = (parent) => {
-    console.log(parent)
     parent.classList.toggle('flipped')
   }
 

@@ -61,7 +61,6 @@ class App extends Component {
   setPlayerName = (event) => {
     event.preventDefault()
     let name = event.target.previousSibling.value
-    console.log(name)
     this.setState({
       playerName: name
     })
@@ -71,7 +70,7 @@ class App extends Component {
     return (
       <div className="App">
       {
-        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName }/> : <Main playerName={ this.state.playerName } chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName } chosenPath={ this.state.chosenPath } resetPath={ this.resetPath }/>
+        this.state.showSplash ? <Splash choosePath={ this.choosePath } showSplash={ this.showSplash } setPlayerName={ this.setPlayerName } /> : <Main playerName={ this.state.playerName } chosenCommands={ this.state.chosenCommands } playerName={ this.state.playerName } chosenPath={ this.state.chosenPath } resetPath={ this.resetPath } />
       }
       </div>
     );
