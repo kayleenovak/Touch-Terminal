@@ -11,8 +11,9 @@ export default class Path extends Component {
   }
   render() {
     return (
-      <div>
-        <div>  
+      <div className='path'>
+        <p className='choose-path'>Choose your path:</p>
+        <div className='button-wrapper'>  
           <button className='level-btn beginner' value='gitCommands' onClick={ this.props.choosePath }>Git Commands</button>
           <button className='level-btn advanced' value='terminalCommands' onClick={ this.props.choosePath }>Terminal Commands</button>
         </div>

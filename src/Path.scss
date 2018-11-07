@@ -1,26 +1,64 @@
 @import 'variables';
 
-.level-btn {
-  height: 80px;
-  width: 150px;
-  margin: 10px;
+.path {
+  font-family: $raleway;
+}
+
+.choose-path {
   font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.button-wrapper {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.level-btn {
+  font-family: $raleway;
+  height: 90px;
+  width: 200px;
+  margin: 10px;
+  font-size: 1.7em;
   color: white;
   border: none;
+  border-radius: 5px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #07526e;
+  text-shadow: 2px 2px 2px $black;
+  border: 2px solid $black;
+}
+
+.level-btn:active {
+  top:3px;
+  box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #07526e, 0px 5px 3px #999;
+}
+
+.level-btn:before {
+  position: absolute;
+  padding-top: 10px;
+  top: 10px;
+  text-shadow: 1px 1px 2px $black;
 }
 
 .beginner {
-  background-color: $drk-blue;
+  background-color: #80FFB8;
 }
 
 .advanced {
-  background-color: $black
+  background-color: #00B8FB;
 }
 
 .start-learning {
   background: $yellow;
   height: 40px;
+  width: 150px;
   color: $black;
   border: none;
   font-size: 20px;
+  border-radius: 5px;
+}
+
+.start-learning:hover {
+  background: $white;
 }
