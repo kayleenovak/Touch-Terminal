@@ -9,7 +9,6 @@ export default class CardContainer extends Component {
   constructor() {
     super()
     this.state = {
-      showFinalScore: false,
       localStorageIndex: 0
     }
   }
@@ -33,7 +32,7 @@ export default class CardContainer extends Component {
     return (
       <div className='card-container'>
       {
-        this.state.showFinalScore ? <FinalScore resetScore={ this.startNewPath } chosenPath={ this.props.chosenPath } playerScore={ this.props.playerScore } playerName={ this.props.playerName }/> : <Card answer={ this.props.chosenCommands[this.props.cardIndex].answer } question={ this.props.chosenCommands[this.props.cardIndex].question } nextCard={ this.props.nextCard } updateScore={ this.props.updateScore } setStorage={ this.setToLocalStorage } checkIncorrectAnswers={ this.props.checkIncorrectAnswers } />
+        this.props.finalScore ? <FinalScore resetScore={ this.startNewPath } chosenPath={ this.props.chosenPath } playerScore={ this.props.playerScore } playerName={ this.props.playerName }/> : <Card answer={ this.props.chosenCommands[this.props.cardIndex].answer } question={ this.props.chosenCommands[this.props.cardIndex].question } nextCard={ this.props.nextCard } updateScore={ this.props.updateScore } setStorage={ this.setToLocalStorage } checkIncorrectAnswers={ this.props.checkIncorrectAnswers } />
       }
       </div>
     )
