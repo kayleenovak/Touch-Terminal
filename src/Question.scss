@@ -32,6 +32,11 @@
   bottom: 55px;
   left: 40px;
   border: 2px solid $yellow;
+  font-size: 1.2em;
+}
+
+.guess-input::placeholder {
+  font-size: 1.2em;
 }
 
 .guess-btn {

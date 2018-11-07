@@ -25,7 +25,7 @@
 .command-list {
   width: 90%;
   overflow: scroll;
-  height: 130px;
+  height: 100px;
 }
 
 .practice-command {
@@ -50,4 +50,5 @@
 
 .practice-btn {
   @include practice-btn(200px)
+  margin-bottom: 8px;
 }

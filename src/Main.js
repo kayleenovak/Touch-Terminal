@@ -13,6 +13,7 @@ export default class Main extends Component {
     this.state = {
       score: 0,
       percentage: 0,
+      cardIndex: 0,
       showPractice: false,
       incorrectAnswers: [],
       localStorage: []
@@ -25,6 +26,19 @@ export default class Main extends Component {
     this.setState({
       incorrectAnswers:  incorrectAnswers
     })
+  }
+
+  nextCard = () => {
+    let newIndex = this.state.cardIndex + 1
+    if (this.state.cardIndex < this.props.chosenCommands.length - 1) {
+      this.setState({
+        cardIndex: newIndex
+      })
+    } else {
+      this.setState({
+        showFinalScore: true
+      })
+    }
   }
 
   updateScore = () => {
@@ -65,6 +79,7 @@ export default class Main extends Component {
     }
     this.setState({
       score: 0,
+      cardIndex: 0,
       percentage: 0,
       incorrectAnswers: []
     })
@@ -75,7 +90,7 @@ export default class Main extends Component {
       <div className='main'> 
         <Header chosenPath={ this.props.chosenPath } resetScore={ this.resetScore } showPractice={ this.showPractice } />
         { 
-          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore } /> : <CardContainer chosenPath={ this.props.chosenPath } chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } resetScore={ this.resetScore } checkIncorrectAnswers={ this.checkIncorrectAnswers } playerScore={ this.state.percentage } playerName={ this.props.playerName } />
+          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore } /> : <CardContainer nextCard={ this.nextCard } cardIndex={ this.state.cardIndex } chosenPath={ this.props.chosenPath } chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } resetScore={ this.resetScore } checkIncorrectAnswers={ this.checkIncorrectAnswers } playerScore={ this.state.percentage } playerName={ this.props.playerName } />
         }
         <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.chosenCommands.length } percentage={ this.state.percentage } />
         <PracticeCommands showPractice={ this.showPractice } incorrectAnswers={ this.state.incorrectAnswers } />
