@@ -57,17 +57,18 @@ export default class Main extends Component {
   }
 
   resetScore = (event) => {
-    console.log(event)
     if(event.target.value === 'gitCommands' || event.target.value === 'terminalCommands') {
       localStorage.clear()
       this.props.resetPath(event)
       this.setState({
-        showPractice: false
+        showPractice: false,
+        incorrectAnswers: []
       })
     }
     this.setState({
       score: 0,
-      percentage: 0
+      percentage: 0,
+      incorrectAnswers: []
     })
   }
 
@@ -76,7 +77,7 @@ export default class Main extends Component {
       <div className='main'> 
         <Header chosenPath={ this.props.chosenPath } resetScore={ this.resetScore } showPractice={ this.showPractice }/>
         { 
-          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenPath={ this.props.chosenPath } chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } checkIncorrectAnswers={ this.checkIncorrectAnswers } playerScore={ this.state.percentage } playerName={ this.props.playerName }/>
+          this.state.showPractice ? <Practice localStorage={ this.state.localStorage } updateScore={ this.updateScore }/> : <CardContainer chosenPath={ this.props.chosenPath } chosenCommands={ this.props.chosenCommands } updateScore={ this.updateScore } resetScore={ this.resetScore } checkIncorrectAnswers={ this.checkIncorrectAnswers } playerScore={ this.state.percentage } playerName={ this.props.playerName }/>
         }
         <Score playerName={ this.props.playerName } questionsCorrect={ this.state.score } totalQuestions={ this.props.chosenCommands.length } percentage={ this.state.percentage }/>
         <PracticeCommands showPractice={ this.showPractice } incorrectAnswers={ this.state.incorrectAnswers }/>

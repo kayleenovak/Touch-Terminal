@@ -1,0 +1,22 @@
+@import 'variables.scss';
+
+.low-score {
+  @include card-layout()
+}
+
+.wave {
+  @include wave()
+}
+
+.cont-learning {
+  margin-top: 135px;
+}
+
+.change-path-btn {
+  @include white-btn(300px, 248px, 200px)
+}
+
+.score-summary {
+  position: relative;
+  margin-top: 20px;
+}

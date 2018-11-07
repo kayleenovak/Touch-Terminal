@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+.mid-score {
+  @include card-layout()
+  font-family: $raleway;
+}
+
+.wave {
+  @include wave()
+}
+
+.cont-learning {
+  margin-top: 135px;
+}
+
+.change-path-btn {
+  @include white-btn(300px, 248px, 200px)
+}
+
+
+.score-summary {
+  position: relative;
+  margin-top: 20px;
+}
