@@ -1,23 +1,21 @@
 @import 'variables.scss';
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .practice-commands {
-  margin-top: 20px;
-  height: 100%;
-  box-shadow: 2px 2px 5px grey;
+  align-items: center;
   border-radius: 10px;
-  margin-right: 20px;
-  padding: 0px 20px;
+  box-shadow: 2px 2px 5px $grey;
+  color: $black;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
-  align-items: center;
-  color: $black
+  margin-right: 20px;
+  margin-top: 20px;
+  padding: 0px 20px;
 }
 
 .practice-commands-header {
-  font-family: 'Raleway', sans-serif;
+  font-family: $raleway;
   margin-top: 15px;
   width: 100%;
   text-align: left;
@@ -31,71 +29,25 @@
 }
 
 .practice-command {
-  font-family: 'Permanent Marker', cursive;
+  font-family: $marker;
   font-size: 1.2em;
 }
 
-.command-list::-webkit-scrollbar-track
-{
+.command-list::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   background-color: #F5F5F5;
 }
 
-.command-list::-webkit-scrollbar
-{
+.command-list::-webkit-scrollbar {
   width: 10px;
-  background-color: #00FFF1;
+  background-color: $med-blue;
 }
 
-.command-list::-webkit-scrollbar-thumb
-{
-  background-color: #00FFF1; 
-  background-image: -webkit-linear-gradient(45deg,
-                                            rgba(255, 255, 255, .2) 25%,
-                        transparent 25%,
-                        transparent 50%,
-                        rgba(255, 255, 255, .2) 50%,
-                        rgba(255, 255, 255, .2) 75%,
-                        transparent 75%,
-                        transparent)
+.command-list::-webkit-scrollbar-thumb {
+  background-color: $med-blue; 
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
 }
 
 .practice-btn {
-}
-
-.practice-btn {
-  background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
-  background-image: linear-gradient(top, #f4f1ee, #fff);
-  border-radius: 25px;
-  box-shadow: 0px 4px 10px 0px #00FFF1, 0px -4px 10px 0px #00FFF1, inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
-  float:left;
-  height: 50px;
-  margin-bottom: 10px;
-  position: relative;
-  width: 250px;      
-  -webkit-transition: all .1s linear;
-  transition: all .1s linear;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  font-weight: 600;
-  color: $black;
-  text-shadow: 2px 2px 2px $yellow;
-}
-
-.practice-btn:after{
-  color:#e9e6e4;
-  content: "";
-  display: block;
-  font-size: 30px;
-  height: 30px;
-  text-decoration: none;
-  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
-  position: absolute;
-  width: 30px;
-}
-
-.practice-btn:hover{
-  background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
-  background-image: linear-gradient(top, #fff, #f4f1ee);
-  color:#0088cc;
+  @include practice-btn(200px)
 }

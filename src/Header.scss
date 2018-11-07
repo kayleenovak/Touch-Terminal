@@ -1,39 +1,39 @@
 @import 'variables.scss';
 
 .header {
-  position: relative;
-  display: flex;
+  align-items: center;
   background: $med-blue;
+  display: flex;
   height: 110px;
   justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .touch-terminal-header {
-  margin-top: 35px;
-  font-size: 3.8em;
-  font-family: $marker;
   color: $black;
+  font-family: $marker;
+  font-size: 3.8em;
+  margin-top: 35px;
 }
 
 .header-buttons {
-  position: absolute;
   bottom: 0px;
+  position: absolute;
   right: 20px;
 }
 
 .header-button {
   background: none;
-  border: none;
   border-bottom: 3px solid transparent;
-  padding: 5px;
+  border: none;
+  color: $black;
   font-size: .9em;
   font-weight: 600;
   margin-left: 12px;
-  color: $black;
+  padding: 5px;
 }
 
 .header-button:hover {
-  border-bottom: 3px solid white;
-  color: white;
+  border-bottom: 3px solid $white;
+  color: $white;
 }

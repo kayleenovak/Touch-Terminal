@@ -1,6 +1,4 @@
 @import './variables';
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 .question-container {
   @include card-layout();
@@ -17,7 +15,7 @@
 .directions {
   margin: 20px 0 0 20px;
   font-size: 1.5em;
-  font-family: 'Raleway', sans-serif;
+  font-family: $raleway;
 }
 
 .question {
@@ -25,7 +23,7 @@
   font-size: 2em;
   width: 95%;
   text-align: center;
-  font-family: 'Permanent Marker', cursive;
+  font-family: $marker;
 }
 
 .guess-input {
@@ -37,40 +35,5 @@
 }
 
 .guess-btn {
-  top: 295px;
-  left: 485px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-}
-
-.guess-btn {
-  background-image: linear-gradient(top, #f4f1ee, #fff);
-  border-radius: 25px;
-  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
-  color: $black;
-  float:left;
-  font-weight: 600;
-  height: 50px;
-  margin: 0 30px 30px 0;
-  position: relative;
-  transition: all .1s linear;
-  width: 180px;      
-}
-
-.guess-btn:after{
-  color:#e9e6e4;
-  content: "";
-  display: block;
-  font-size: 30px;
-  height: 30px;
-  text-decoration: none;
-  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
-  position: absolute;
-  width: 30px;
-}
-
-.guess-btn:hover{
-  background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
-  background-image: linear-gradient(top, #fff, #f4f1ee);
-  color:#0088cc;
+  @include white-btn(295px, 485px, 180px, 1em)
 }

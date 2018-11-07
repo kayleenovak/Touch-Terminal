@@ -4,6 +4,7 @@ $light-blue: #00DAF9;
 $yellow: #F9FF59;
 $black: #3C4856;
 $white: #FFFFFF;
+$grey: grey;
 $raleway: 'Raleway', sans-serif;
 $marker: 'Permanent Marker', cursive;
 
@@ -70,7 +71,42 @@ $marker: 'Permanent Marker', cursive;
   transform: rotateY(180deg);
 }
 
-@mixin white-btn($top, $left, $width) {
+@mixin white-btn($top, $left, $width, $size) {
+  background-image: linear-gradient(top, #f4f1ee, $white);
+  border-radius: 25px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+  color: $black;
+  float:left;
+  font-size: $size;
+  font-weight: 600;
+  height: 50px;
+  left: $left;
+  margin: 0 30px 30px 0;
+  position: absolute;
+  text-shadow: 2px 2px 2px $yellow;
+  top: $top;
+  transition: all .1s linear;
+  width: $width;      
+
+  &:after{
+    color: #e9e6e4;
+    content: "";
+    display: block;
+    font-size: 30px;
+    height: 30px;
+    position: absolute;
+    text-decoration: none;
+    text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+    width: 30px;
+  }
+
+  &:hover{
+    background-image: linear-gradient(top, $white, #f4f1ee);
+    color: #0088cc;
+  }
+}
+
+@mixin practice-btn($width) {
   background-image: linear-gradient(top, #f4f1ee, $white);
   border-radius: 25px;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
@@ -79,11 +115,8 @@ $marker: 'Permanent Marker', cursive;
   font-size: 1.3em;
   font-weight: 600;
   height: 50px;
-  left: $left;
   margin: 0 30px 30px 0;
-  position: absolute;
   text-shadow: 2px 2px 2px $yellow;
-  top: $top;
   transition: all .1s linear;
   width: $width;      
 
@@ -121,4 +154,13 @@ $marker: 'Permanent Marker', cursive;
   position: absolute;
   top: 30px;
   right: 216px;
+}
+
+@mixin score($align, $size, $top, $right, $bottom, $left, $family) {
+  width: 100%;
+  text-align: $align;
+  font-size: $size;
+  margin: $top $right $bottom $left;
+  font-family: $family
+
 }
